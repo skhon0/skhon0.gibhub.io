@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razones por las que amo a mi novio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(238, 204, 204);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px; 
+            color:rgb(142, 142, 247);
+        }
+        #reason {
+            font-size: 24px;
+            margin-top: 20px;
+            position: relative; 
+        }
+        #reasonButton {
+            background-color: rgb(212, 109, 109);
+            color: rgb(230, 161, 161);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Razones por las que amo a mi novio UWU</h1>
+    <div id="reason"></div>
+    <button id="reasonButton">Ver una razón</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var reasons = [
+            "Porque eres la persona más dulce que he conocido.",
+"Porque tu sonrisa es hermosa.",
+"Eres inteligente y lindo.",
+"Te amo porque crees en mí.",
+"Te amo porque estuviste conmigo en mis momentos difíciles.",
+"Porque eres una persona luchadora y te estás superando.",
+"Porque me encanta cuando cantas.",
+"Te amo porque eres mi mejor amigo y mi amor.",
+"Porque eres divertido.",
+"Te quiero porque tienes un corazón hermoso.",
+"Te amo porque tienes buen sentido del humor y no te importa reírte de ti mismo.",
+"Porque eres detallista.",
+"Porque se que tus besos me volverán loca.",
+"Te amo porque me robaste el corazón.",
+"Porque me haces ser mejor persona.",
+"Porque tenemos muchas cosas en común.",
+"Te amo por todos los años que me has soportado siendo yo una jopende xd.",
+"Porque eres mi compañero de juego y webeo.",
+"Porque me gusta tu manera de mirarme.",
+"Te amo porque eres bueno conmigo.",
+"Porque adoro como me proteges.",
+"Porque siempre sabes qué decir para que me sienta mejor.",
+"Te amo porque siempre eres persistente y resuelves.",
+"Porque me gusta tu risa contagiosa.",
+"Te amo por no necesitar palabras para saber que me pasa algo.",
+"Por escucharme siempre.",
+"Por hacer de cualquier rato juntos un momento brutalmente epico.",
+"Te amo porque no importa lo ocupado que estés, siempre sacas tiempo para estar conmigo.",
+"Por aguantarme cuando nadie me aguanta.",
+"Porque aceptas y perdonas mis errores.",
+"Te amo porque en nuestra relación progresamos.",
+"Porque me aceptas tal cual soy.",
+"Te amo porque alegras cada uno de mis días.",
+"Porque imagino una vida junto a ti.",
+"Porque te preocupas por mí, antes que por un nosotros.",
+"Te quiero porque me haces sentir especial con solo estar a mi lado.",
+"Porque solo puedo verte a ti cuando cierro los ojos, y solo quiero verte a ti al abrirlos.",
+"Te amo porque juntos superaremos la distancia que nos separa sin importar lo que sucediera.",
+"Por tu forma de ser y amar.",
+"Por animarme cuando no me encuentro bien.",
+"Te amo porque sabes cuándo necesito escuchar un te amo de tus labios.",
+"Por ser alguien en quien puedo siempre confiar.",
+"Te amo cuando me miras con los ojos llenos de esperanza.",
+"Por no temerle al compromiso.",
+"Por valorar hasta el más mínimo detalle.",
+"Te amo porque has llenado mi vida de alegrías e ilusiones.",
+"Por confiarme tus secretos y guardar los míos.",
+"Porque eres la cura para todas mis heridas.",
+
+"Por hacer que se desborden mis ganas de vivir y compartir la vida contigo.",
+"Porque arriesgas todo por mí.",
+"Porque no soy nada sin ti.",
+"Te amo porque me aportas tranquilidad y paz.",
+"Porque no hay nada que desee más cada día que fundirme en un abrazo contigo.",
+"Porque has descubierto cosas en mí que nunca nadie antes había encontrado.",
+"Por pensar en mí.",
+"Porque ya no tengo ojos para otra persona que no seas tú.",
+"Te amo porque me enseñas algo nuevo cada día.",
+"Por las cosas que me dices.",
+"Por ser mi amigo, mi amante, mi novio, mi compañero y mi todo.",
+"Te amo por amarme como me amas.",
+"Porque eres especial en mi vida.",
+"Por tus sorpresas.",
+"Te admiro por el hombre que eres.",
+"Porque me derrito cada vez que me hablas.",
+"Porque eres capaz de sacar lo mejor de mí.",
+"Por hacerme sentir que soy la única chica de tu vida.",
+"Porque solo contigo me siento capaz de todo.",
+"Por dejarme soñar.",
+"Por no olvidarte de mí.",
+"Porque me encantas.",
+"Porque cada día tengo un motivo más para amarte.",
+"Te amo por ser simplemente tú."
+            ];
+
+            $("#reasonButton").click(function(){
+                var randomIndex = Math.floor(Math.random() * reasons.length);
+                var randomReason = reasons[randomIndex];
+                var leftPosition = Math.random() * ($(window).width() - 200);
+                var topPosition = Math.random() * ($(window).height() - 100);
+
+                $("#reason").text(randomReason).css({
+                    "left": leftPosition + "px",
+                    "top": topPosition + "px",
+                    "position": "absolute"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
